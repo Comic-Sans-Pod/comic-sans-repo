@@ -1,0 +1,23 @@
+{
+  "name": "comic-sans-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Comic-Sans-Pod/comic-sans-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Comic-Sans-Pod/comic-sans-repo/issues"
+  },
+  "homepage": "https://github.com/Comic-Sans-Pod/comic-sans-repo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
