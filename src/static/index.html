@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+<h1>Login</h1>
+</header>
+
+<main>
+    <form id="loginForm" method="POST" action="http://localhost:3000/login">
+        <label for="username">Username: </label>
+        <input type="text" id="username">
+
+        <br><br><label for="password">Password: </label>
+        <input type="password" id="password">
+
+        <br><br><button type="submit" id="loginBtn">Log in</button>
+    </form>
+</main>
+
+<script src="js/jquery-2.2.4.js"></script>
+<!--<script src="src/index.js"></script>-->
+<script>
+
+    $('#loginForm').submit((e) => {
+
+        e.preventDefault();
+        let username = $('#username').val();
+        console.log(username);
+        let password = $('#password').val();
+        console.log(password);
+
+        $.ajax({
+            contentType: 'application/json',
+            url: "http://localhost:3000/login",
+            type: "POST",
+            data: JSON.stringify({
+                username: username,
+                password: password
+            }),
+            success: function () {
+                console.log("success!");
+            },
+            error: function (xhr, data, error) {
+                console.log(xhr);
+            }
+        });
+
+    })
+</script>
+</body>
+</html>
